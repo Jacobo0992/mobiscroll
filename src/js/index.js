@@ -1,3 +1,4 @@
+
 $(function(){
     $('#category').mobiscroll().select({
         data: [
@@ -17,6 +18,16 @@ $(function(){
     });
 });
 
-const onClick = ()=> {
-    
-}
+$("#tour-form").submit((event)=>{
+
+    event.preventDefault()
+    let formData = new FormData(document.getElementById("tour-form"))
+    let data = {};
+    formData.forEach((value, key) => data[key] = value);
+    $.ajax({
+        type: "POST",
+        url: "/api/tours/post",
+        data: data,
+        success: (data, status) => {}
+    })
+})

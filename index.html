@@ -10,7 +10,7 @@
 
 <body>
     <section>
-        <form action="">
+        <form id="tour-form">
             <h1>Insert a tour</h1>
             <div class="mbsc-grid">
                 <div class="mbsc-row">
@@ -26,12 +26,12 @@
                 <div class="mbsc-row">
                     <label class="mbsc-col">
                         Category
-                        <input type="text" mbsc-input id="category">
+                        <input type="text" mbsc-input id="category" name="category">
                     </label>
 
                     <label class="mbsc-col">
                         Date
-                        <input id="date" mbsc-input>
+                        <input id="date" mbsc-input name="date">
                     </label>
                 </div>
                 <div class="mbsc-row">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div>
-                <button type="submit" mbsc-button id="send-button" onClick="" >Save</button>
+                <button type="submit" mbsc-button id="send-button">Save</button>
             </div>
         </form>
     </section>
